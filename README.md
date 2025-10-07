@@ -115,7 +115,7 @@ primer_proyecto/
 
 ## 👩‍💻 Sobre mí
 
-**Lidia Developer**  
+**Lidia García**  
 📍 Valencia, España  
 🎯 En formación para convertirme en **Ingeniera de IA Generativa**  
 💼 LinkedIn: [linkedin.com/in/lidia-garcia-pascual](https://www.linkedin.com/in/lidia-garcia-pascual/)
