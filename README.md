@@ -115,10 +115,13 @@ primer_proyecto/
 
 ## 👩‍💻 Sobre mí
 
+Cuento con casi una década de experiencia en 🚚 **logística internacional** y una sólida trayectoria en **dirección de equipos**, que ahora impulso hacia una nueva etapa centrada en 🤖 **Inteligencia Artificial Generativa** y la **automatización de procesos**.
+
 **Lidia García**  
 📍 Valencia, España  
 🎯 En formación para convertirme en **Ingeniera de IA Generativa**  
-💼 LinkedIn: [linkedin.com/in/lidia-garcia-pascual](https://www.linkedin.com/in/lidia-garcia-pascual/)
+💼 [linkedin.com/in/lidia-garcia-pascual](https://www.linkedin.com/in/lidia-garcia-pascual/)
+
 
 
 
