@@ -1,43 +1,62 @@
-# 🛠️ Mini ETL + API con FastAPI
+# 🛠️ Mini ETL + API con FastAPI  
 ![Tests](https://github.com/lidiadeveloper/mini-etl-api/actions/workflows/tests.yml/badge.svg)
 
-Este es mi **primer proyecto en Python**, donde combino:
-- **ETL simple**: cargar y limpiar un CSV (`products.csv`).
-- **API con FastAPI**: exponer los datos y permitir añadir productos.
-- **Tests automatizados con pytest**: validar que la API funciona.
+> Proyecto de práctica desarrollado durante mi formación en **Inteligencia Artificial Generativa**.  
+> Integra conceptos de Python, manejo de datos (ETL), APIs con FastAPI y pruebas automatizadas con Pytest.
 
 ---
 
-## 🚀 Cómo ejecutar
+## 🚀 Descripción general
 
-1. Crear y activar entorno virtual:
-   ```bash
-   py -3.13 -m venv .venv
-   .\.venv\Scripts\activate   # Windows
-   source .venv/bin/activate  # macOS/Linux
-   ```
+Este proyecto simula un pequeño flujo **ETL (Extract, Transform, Load)** y expone los resultados a través de una **API REST**.  
+Fue creado como ejercicio para consolidar los fundamentos de desarrollo backend con Python.
 
-2. Instalar dependencias:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Lanzar la API:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
-
-4. Abrir en navegador:
-   👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+**Incluye:**
+- 🧩 **ETL simple**: carga y limpieza de datos desde `products.csv`.  
+- ⚡ **API con FastAPI**: endpoints REST para consultar y añadir productos.  
+- 🧪 **Tests automatizados**: verificación del correcto funcionamiento con `pytest`.  
+- 🧰 **CI/CD con GitHub Actions**: ejecución automática de tests en cada commit.  
 
 ---
 
-## 📚 Endpoints principales
+## 📂 Estructura del proyecto
+```
+primer_proyecto/
+├─ app/            → Lógica de la API con FastAPI
+│  └─ main.py
+├─ src/            → Código ETL (carga de datos)
+│  └─ etl.py
+├─ data/           → Datos de ejemplo
+│  └─ products.csv
+├─ tests/          → Pruebas automatizadas
+│  └─ test_smoke.py
+├─ .github/workflows/tests.yml → Configuración CI
+├─ requirements.txt
+└─ README.md
+```
 
-- `GET /health` → estado de la API.  
-- `GET /items` → lista todos los productos.  
-- `GET /items?max_price=20` → lista productos con precio ≤ 20.  
-- `POST /items` → añade un producto nuevo.  
+---
+
+## 🧠 Conceptos aplicados
+
+- Programación estructurada en **Python**
+- Validación de datos con **Pydantic**
+- Construcción de endpoints con **FastAPI**
+- Testing con **Pytest**
+- Integración continua con **GitHub Actions**
+- Control de versiones con **Git**
+- Buenas prácticas de documentación (`README`, `requirements.txt`, estructura limpia)
+
+---
+
+## 🧩 Endpoints principales
+
+| Método | Endpoint | Descripción |
+|--------|-----------|--------------|
+| `GET` | `/health` | Comprueba el estado de la API |
+| `GET` | `/items` | Devuelve todos los productos |
+| `GET` | `/items?max_price=20` | Filtra productos con precio ≤ 20 |
+| `POST` | `/items` | Añade un nuevo producto |
 
 **Ejemplo JSON:**
 ```json
@@ -46,32 +65,61 @@ Este es mi **primer proyecto en Python**, donde combino:
 
 ---
 
-## ✅ Tests
+## 🧪 Ejecución local
 
-Ejecutar tests:
-```bash
-pytest -q
-```
+1. **Crear entorno virtual**
+   ```bash
+   py -3.13 -m venv .venv
+   .\.venv\Scripts\activate   # Windows
+   source .venv/bin/activate  # macOS/Linux
+   ```
 
-### Tests incluidos:
-- `test_health`: comprueba que la API está viva.  
-- `test_add_item_and_duplicate`: añade un producto y rechaza duplicados.  
-- `test_filter_items_by_price`: devuelve solo productos ≤ precio dado.  
+2. **Instalar dependencias**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Ejecutar servidor**
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+
+4. **Abrir en navegador**
+   👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+5. **Ejecutar tests**
+   ```bash
+   pytest -q
+   ```
 
 ---
 
-## 📂 Estructura del proyecto
-```
-primer_proyecto/
-├─ app/            # API con FastAPI
-│  └─ main.py
-├─ src/            # ETL (carga CSV)
-│  └─ etl.py
-├─ tests/          # Tests con pytest
-│  └─ test_smoke.py
-├─ data/           # Datos de ejemplo
-│  └─ products.csv
-├─ requirements.txt
-├─ README.md
-└─ .gitignore
-```
+## 💡 Aprendizajes clave
+
+- Cómo crear una **API profesional** con FastAPI.  
+- Cómo organizar un proyecto limpio con estructura modular.  
+- Cómo validar datos y controlar errores en endpoints.  
+- Cómo usar **pytest** y CI/CD para mantener calidad de código.  
+- Cómo documentar proyectos técnicos para LinkedIn y portafolio.
+
+---
+
+## 🌱 Próximos pasos
+
+- Integrar **base de datos SQLite** o PostgreSQL.  
+- Añadir autenticación básica.  
+- Implementar interfaz frontend sencilla (por ejemplo, con Streamlit o React).  
+- Desplegar en la nube (Render, Hugging Face o AWS).  
+
+---
+
+## 👩‍💻 Sobre mí
+
+**Lidia Developer**  
+📍 Valencia, España  
+🎯 En formación para convertirme en **Ingeniera de IA Generativa**  
+💼 LinkedIn: [linkedin.com/in/lidia-garcia-pascual](https://www.linkedin.com/in/lidia-garcia-pascual/)
+
+
+
+
