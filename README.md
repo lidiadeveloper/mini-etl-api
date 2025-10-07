@@ -1,4 +1,5 @@
 # 🛠️ Mini ETL + API con FastAPI
+![Tests](https://github.com/lidiadeveloper/mini-etl-api/actions/workflows/tests.yml/badge.svg)
 
 Este es mi **primer proyecto en Python**, donde combino:
 - **ETL simple**: cargar y limpiar un CSV (`products.csv`).
